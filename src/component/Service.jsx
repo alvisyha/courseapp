@@ -8,7 +8,7 @@ import service from "../assets/service.png";
 const Service = () => {
   return (
     <>
-      <div className="container max-w-screen-xl mt-24 mx-auto">
+      <div className="container max-w-screen-xl mt-24 mx-auto" id="service">
         <div className="flex lg:justify-start lg:text-left justify-center text-center">
           <h1 className="font-extrabold lg:leading-tight text-4xl text-primary lg:text-6xl w-1/2">
             Our Various Services are{" "}

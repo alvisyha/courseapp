@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GrLanguage } from "react-icons/gr";
 import { FaXmark, FaBars } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,9 +29,15 @@ const Navbar = () => {
             {/* Nav Items */}
             <ul className="md:flex space-x-12 hidden">
               {navItems.map(({ link, path }) => (
-                <a key={link} href={path} className="block hover:text-gray-400">
+                <Link
+                  spy={true}
+                  smooth={true}
+                  key={link}
+                  to={path}
+                  className="block hover:text-gray-400 cursor-pointer"
+                >
                   {link}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>
@@ -72,9 +79,9 @@ const Navbar = () => {
         }`}
       >
         {navItems.map(({ link, path }) => (
-          <a key={link} href={path} className="block hover:text-gray-300">
+          <Link key={link} to={path} className="block hover:text-gray-300">
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </>

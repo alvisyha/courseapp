@@ -11,8 +11,8 @@ const Footer = () => {
     <>
       <div className="bg-secondary">
         <div className="container max-w-screen-xl mx-auto">
-          <div className="flex justify-between py-20">
-            <div className="">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between py-20">
+            <div className="mx-auto">
               <h1 className="text-white text-2xl font-bold italic pb-5">
                 Courseapp.
               </h1>
@@ -39,8 +39,8 @@ const Footer = () => {
                 <p className="text-sm text-white">+628 123 123</p>
               </div>
             </div>
-            <div>
-              <h3 className="text-white font-normal text-xl text-center">
+            <div className="mb-16 mt-16 lg:mt-0">
+              <h3 className="text-white font-normal text-xl text-center ">
                 Our socila media
               </h3>
               <div className="flex gap-5 justify-center mt-8 text-primary text-xl">
@@ -55,8 +55,8 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div>
-              <h3 className="text-white text-xl font-normal">
+            <div className="mx-auto">
+              <h3 className="text-white text-xl font-normal lg:text-left text-center ">
                 Join a newsletter
               </h3>
               <input
@@ -64,7 +64,7 @@ const Footer = () => {
                 placeholder="Enter your email..."
                 type="text"
               />
-              <div className="mt-4 flex">
+              <div className="mt-4 flex justify-center lg:justify-start">
                 <a
                   className=" flex gap-3 items-center bg-primary text-white text-sm rounded-sm font-semibold px-4 py-2 hover:bg-blue-900 trasition duration-300"
                   href="/"

@@ -4,7 +4,7 @@ import Banner from "../shared/Banner";
 const Home = () => {
   return (
     <>
-      <div className=" mx-auto md:mt-28 mt-20 max-w-screen-xl">
+      <div className=" mx-auto md:mt-28 mt-20 max-w-screen-xl" id="home">
         <Banner
           banner={banner}
           heading="Improve your skills in the world of technology and information on

@@ -30,7 +30,10 @@ const Pricing = () => {
   ];
   return (
     <>
-      <div className="container mx-auto justify-center mt-10 mb-20">
+      <div
+        className="container mx-auto justify-center mt-10 mb-20"
+        id="pricing"
+      >
         <div className="flex justify-center">
           <h1 className="text-4xl text-center font-bold w-1/2 text-primary">
             Take this <span className="text-tartiary">best opportunity</span>,
@@ -38,7 +41,7 @@ const Pricing = () => {
           </h1>
         </div>
         <div className="mt-2 flex justify-center">
-          <p className="text-sm">
+          <p className="text-sm text-center w-screen">
             Payment is easy and available monthly or annually, take it according
             to your needs.
           </p>

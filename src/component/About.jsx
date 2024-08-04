@@ -4,7 +4,10 @@ const About = () => {
   return (
     <>
       <div>
-        <div className="container max-w-screen-xl mt-24 mx-auto text-center">
+        <div
+          className="container max-w-screen-xl mt-24 mx-auto text-center"
+          id="about"
+        >
           <h1 className="mt-5 font-semibold text-xl tracking-widest text-center">
             ABOUT US
           </h1>
