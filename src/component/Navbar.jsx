@@ -31,6 +31,8 @@ const Navbar = () => {
               {navItems.map(({ link, path }) => (
                 <Link
                   spy={true}
+                  activeClass='active'
+                  offset={-100}
                   smooth={true}
                   key={link}
                   to={path}
@@ -79,7 +81,12 @@ const Navbar = () => {
         }`}
       >
         {navItems.map(({ link, path }) => (
-          <Link key={link} to={path} className="block hover:text-gray-300">
+          <Link spy={true}
+          activeClass='active'
+          offset={-100}
+          smooth={true}
+          key={link}
+          to={path} className="block hover:text-gray-300">
             {link}
           </Link>
         ))}

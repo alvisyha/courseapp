@@ -4,22 +4,42 @@ import { MdHeadsetMic } from "react-icons/md";
 import { BiSolidNetworkChart } from "react-icons/bi";
 import CardService from "./CardService";
 import service from "../assets/service.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variant";
 
 const Service = () => {
   return (
     <>
       <div className="container max-w-screen-xl mt-24 mx-auto" id="service">
-        <div className="flex lg:justify-start lg:text-left justify-center text-center">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="flex lg:justify-start lg:text-left justify-center text-center"
+        >
           <h1 className="font-extrabold lg:leading-tight text-4xl text-primary lg:text-6xl w-1/2">
             Our Various Services are{" "}
             <span className="text-tartiary">Very Profitable</span>
           </h1>
-        </div>
+        </motion.div>
         <div className="lg:flex justify-center mx-auto items-center">
-          <div className="lg:w-[650px] sm:w-[350px] mx-auto">
+          <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="lg:w-[650px] sm:w-[350px] mx-auto"
+          >
             <img className="mt-5" src={service} alt="..." />
-          </div>
-          <div className="grid lg:grid-cols-2 md:grid-cols-4 sm:grid-cols-1 gap-4 justify-items-center mt-16">
+          </motion.div>
+          <motion.div
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="grid lg:grid-cols-2 md:grid-cols-4 sm:grid-cols-1 gap-4 justify-items-center mt-16"
+          >
             <CardService
               icon=<BsFillRocketTakeoffFill />
               title="200+ Professional and Experienced Mentors"
@@ -49,7 +69,7 @@ const Service = () => {
                 who will always be ready to serve Dibimbing.id students during
                 the bootcamp and after graduation."
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

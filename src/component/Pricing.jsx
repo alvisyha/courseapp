@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaRegCheckCircle, FaRegTimesCircle } from "react-icons/fa";
 import { SlBasket } from "react-icons/sl";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variant";
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -30,7 +32,11 @@ const Pricing = () => {
   ];
   return (
     <>
-      <div
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
         className="container mx-auto justify-center mt-10 mb-20"
         id="pricing"
       >
@@ -149,7 +155,7 @@ const Pricing = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
